@@ -20,7 +20,7 @@ import { IoLogoGithub, IoLogoInstagram,IoLogoGoogle, IoLogoWhatsapp } from 'reac
 const Page = () => {
     return (
         <Layout>
-            <Container>
+            <Container maxW='container.xl'>
                 <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')} p={3} mt={2} align="center">
                     Hello There, Jay Prajapati here, Full Stack Developer In India
                 </Box>
@@ -39,17 +39,13 @@ const Page = () => {
                     </Box>
                 </Box>
                 <Section delay={0.3}>
-                    <Heading as='h3' variant='section-title'>
-                        Work
+                    <Heading as='h3' variant='section-title' fontFamily='body'>
+                        Intro
                     </Heading>
                     <Paragraph>I am a 4th year Bachelors of Engineering Student in Information
                         Technology at Sardar Vallabhbhai Patel Institute of Technology,
                         Vasad. I’m seeking an opportunity to discover the professional
-                        world that I want to integrate into after my studies {' '}
-                        <NextLink href='/works/logister'>
-                            <Link>Logister</Link>
-                        </NextLink>
-                        .
+                        world that I want to integrate into after my studies .
                     </Paragraph>
                     <Box align='center' my={4}>
                         <NextLink href='/works'>
@@ -86,7 +82,7 @@ const Page = () => {
                     <Heading as='h3' variant='section-title'>
                         CONNECT WITH ME
                     </Heading>
-                    <SimpleGrid columns={[4, 4, 4]}>
+                    <SimpleGrid columns={[4, 4, 4]} align='center'>
                         <Link href='https://www.google.com/' color='telegram.600'>
                             <IoLogoGithub size={50} />
                         </Link>

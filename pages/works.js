@@ -9,8 +9,8 @@ import Layout from "../components/layouts/article";
 const Works = () => {
     return (
         <Layout>
-            <Container>
-                <Heading as='h3' fontSize={20} mb={4}>
+            <Container maxW='container.xl'>
+                <Heading as='h2' fontSize={26} mb={8} align='center'>
                     Works
                 </Heading>
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>

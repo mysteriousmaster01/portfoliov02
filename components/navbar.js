@@ -1,4 +1,3 @@
-import Logo from './logo';
 import NextLink from 'next/link';
 import {
     Box,
@@ -48,7 +47,7 @@ const Navbar = props => {
         >
             <Container 
               display='flex'
-              maxW='container.md'
+              maxW='container.xl'
               wrap='wrap'
               align='center'
               mt={1}
@@ -56,7 +55,7 @@ const Navbar = props => {
             >
                 <Flex align='center' mr='5'>
                     <Heading as='h1' size='lg' letterSpacing='tighter'>
-                        <Logo />
+                        Jay Prajapati
                     </Heading>
                 </Flex>
                 <Stack

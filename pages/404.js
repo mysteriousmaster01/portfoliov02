@@ -3,7 +3,7 @@ import NexLink from 'next/link';
 
 const NotFound = () => {
     return (
-        <Container>
+        <Container maxW='container.xl'>
             <Heading as='h1'>Not Found</Heading>
             <Text>The Page you're looking for was not found.</Text>
             <Divider mt={24} />
