@@ -28,7 +28,7 @@ const Page = () => {
                 <Box display={{ md: 'flex' }} mt={3}>
                     <Box flexGrow={1}>
                         <Heading as='h2' variant="page-title" align='center' fontFamily='cursive'>Jay Prajapati</Heading>
-                        <Heading as='h4' align='center' mt={5} fontFamily=''>
+                        <Heading as='h3' align='center' mt={5} fontFamily=''>
                             <span style={{color:'orangered'}}>
                                 <Typical
                                     steps={["A Developer", 3000, "An Artist", 3000, "A Designer", 3000]}
