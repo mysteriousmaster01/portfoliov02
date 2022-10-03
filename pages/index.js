@@ -17,7 +17,7 @@ import { BioSection, BioYear } from "../components/bio";
 import Layout from "../components/layouts/article";
 import { IoLogoGithub, IoLogoInstagram, IoLogoGoogle, IoLogoWhatsapp } from 'react-icons/io5';
 import Typical from "react-typical";
-
+import DownloadResume from '/public/resume.pdf';
 const Page = () => {
     return (
         <Layout>
@@ -59,11 +59,11 @@ const Page = () => {
                         world that I want to integrate into after my studies .
                     </Paragraph>
                     <Box align='center' my={4}>
-                        <NextLink href='/resume.pdf' target='_blank'>
+                            <a href={DownloadResume} download='resume' target='_blank'>
                             <Button rightIcon={<DownloadIcon />} colorScheme='telegram'>
                                 Resume
                             </Button>
-                        </NextLink>
+                            </a>
                     </Box>
                 </Section>
                 <Section delay={0.4}>
