@@ -17,8 +17,28 @@ import { BioSection, BioYear } from "../components/bio";
 import Layout from "../components/layouts/article";
 import { IoLogoGithub, IoLogoInstagram, IoLogoGoogle, IoLogoWhatsapp } from 'react-icons/io5';
 import Typical from "react-typical";
-import DownloadResume from '/public/resume.pdf';
+
+
 const Page = () => {
+
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('resume.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'resume.pdf';
+                alink.click();
+            })
+        })
+    }
+
+
+
+
     return (
         <Layout>
             <Container maxW='container-xl'>
@@ -28,7 +48,7 @@ const Page = () => {
                 <Box display={{ md: 'flex' }} mt={3}>
                     <Box flexGrow={1}>
                         <Heading as='h2' variant="page-title" align='center' fontFamily='cursive'>Jay Prajapati</Heading>
-                        <Heading as='h3' align='center' mt={5} fontFamily=''>
+                        <Heading as='h4' align='center' mt={5} fontFamily=''>
                             <span style={{color:'orangered'}}>
                                 <Typical
                                     steps={["A Developer", 3000, "An Artist", 3000, "A Designer", 3000]}
@@ -59,11 +79,14 @@ const Page = () => {
                         world that I want to integrate into after my studies .
                     </Paragraph>
                     <Box align='center' my={4}>
-                            <a href={DownloadResume} download='resume' target='_blank'>
-                            <Button rightIcon={<DownloadIcon />} colorScheme='telegram'>
+                        
+                            <Button 
+                            rightIcon={<DownloadIcon />} 
+                            colorScheme='telegram'
+                            onClick={onButtonClick}
+                            >
                                 Resume
                             </Button>
-                            </a>
                     </Box>
                 </Section>
                 <Section delay={0.4}>
