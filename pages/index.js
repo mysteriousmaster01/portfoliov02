@@ -17,6 +17,7 @@ import { BioSection, BioYear } from "../components/bio";
 import Layout from "../components/layouts/article";
 import { IoLogoGithub, IoLogoInstagram, IoLogoGoogle, IoLogoWhatsapp } from 'react-icons/io5';
 import Typical from "react-typical";
+import Social from "../components/Social";
 
 
 const Page = () => {
@@ -113,24 +114,7 @@ const Page = () => {
                 </Section>
 
                 <Section delay={0.4}>
-                    <Heading as='h3' variant='section-title'>
-                        CONNECT WITH ME
-                    </Heading>
-                    <SimpleGrid columns={[4, 4, 4]} align='center'>
-                        <Link href='https://www.google.com/' color='telegram.600'>
-                            <IoLogoGithub size={50} />
-                        </Link>
-                        <Link href='https://www.google.com/'>
-                            <IoLogoInstagram size={50} />
-                        </Link>
-                        <Link href='mailto:jayprajapati2101@gmail.com' color='red'>
-                            <IoLogoGoogle size={50} />
-                        </Link>
-                        <Link href='tel:+916351151815' color='green'>
-                            <IoLogoWhatsapp size={50} />
-                        </Link>
-                    </SimpleGrid>
-
+                    <Social/>
                 </Section>
             </Container>
         </Layout>
